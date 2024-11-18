@@ -1,0 +1,543 @@
+/* Глобальные стили */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-block {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: "Montserrat Alt Light";
+  src: url(../font/Montserrat_Alternates/MontserratAlternates-Light.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Alt Medium";
+  src: url(../font/Montserrat_Alternates/MontserratAlternates-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Alt SemiBold";
+  src: url(../font/Montserrat_Alternates/MontserratAlternates-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Alt Bold";
+  src: url(../font/Montserrat_Alternates/MontserratAlternates-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Alt Black";
+  src: url(../font/Montserrat_Alternates/MontserratAlternates-Black.ttf);
+}
+
+@font-face {
+  font-family: "OpenSans Light";
+  src: url(../font/Open_Sans/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family: "OpenSans Regular";
+  src: url(../font/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "OpenSans SemiBold";
+  src: url(../font/Open_Sans/OpenSans-SemiBold.ttf);
+}
+
+/* Шапка */
+
+header {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  top: 7px;
+  left: 0;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.header_logo {
+  font-size: 15px;
+  font-family: "Montserrat Alt Bold";
+  letter-spacing: 0.03em;
+}
+
+header nav {
+  gap: 30px;
+  justify-self: center;
+}
+
+header nav a {
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  font-family: "OpenSans Regular";
+  color: #292929;
+}
+
+header nav a:hover {
+  transition: all 450ms;
+  color: #7d7d7d;
+}
+
+header nav a:active {
+  transition: all 450ms;
+  transform: scale(1.075);
+}
+
+.soc_media {
+  justify-self: end;
+}
+
+.soc_media a {
+  display: inline-flex;
+  height: fit-content;
+  padding: 9.01px;
+  border-radius: 4px;
+}
+
+.soc_media a:hover {
+  transition: all 450ms;
+  background-color: #159BE9;
+}
+
+.soc_media a:hover img {
+  transition: all 450ms;
+  filter: invert(1);
+}
+
+.soc_media a:active {
+  transition: all 450ms;
+  transform: scale(0.9);
+}
+
+/* Баннер */
+
+main {
+  height: 1080px;
+}
+
+main .container {
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+main .container h1 {
+  font-size: 82px;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+  font-family: "Montserrat Alt Black";
+}
+
+main .container p {
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  margin-bottom: 34px;
+  font-family: "Montserrat Alt Medium";
+}
+
+main .container button {
+  padding: 10px 17px;
+  font-size: 16px;
+  margin-bottom: 32px;
+  background-color: #159BE9;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: "OpenSans Regular";
+  letter-spacing: .01em;
+}
+
+main .container button:hover {
+  transition: all 450ms;
+  background-color: #0679bb;
+}
+
+main .container button:active {
+  transition: all 450ms;
+  transform: scale(0.9);
+}
+
+main .container img {
+  width: 100%;
+}
+
+main .container a {
+  font-size: 14px;
+  position: absolute;
+  bottom: 107px;
+  font-family: "Montserrat Alt Light";
+  color: #292929;
+}
+
+main .container a:hover {
+  transition: all 450ms;
+  color: #7d7d7d;
+}
+
+main .container a:active {
+  transition: all 450ms;
+  transform: scale(1.075);
+}
+
+/* Каталог */
+
+#catalog .container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item {
+  overflow: hidden;
+  width: 420px;
+  height: 420px;
+  color: white;
+  position: relative;
+  transition: filter 450ms;
+  filter: brightness(1);
+}
+
+.item:hover img {
+  transition: filter 450ms;
+  filter: brightness(0.8);
+}
+
+.item .info {
+  align-items: center;
+  position: absolute;
+  top: -130px;
+  left: 0;
+  width: inherit;
+  transition: top 450ms;
+}
+
+.item:hover .info {
+  transition: all 450ms;
+  top: 30px;
+}
+
+.item .info .title {
+  font-family: "Montserrat Alt SemiBold";
+  font-size: 32px;
+  letter-spacing: .01em;
+  text-shadow: 0 2px 6px black;
+}
+
+.item .info .description {
+  font-family: "OpenSans Regular";
+  font-size: 20px;
+  letter-spacing: .01em;
+  letter-spacing: .01em;
+  text-shadow: 0 2px 6px black;
+  margin-bottom: 12px;
+}
+
+.item .btns button {
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: none;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  letter-spacing: .01em;
+}
+
+.item .btns button:active {
+  transition: all 450ms;
+  transform: scale(1.075);
+}
+
+.item .btns button:nth-child(odd){
+  background-color: #159BE9;
+  color: white;
+  margin-right: 10px;
+}
+
+.item .btns button:nth-child(odd):hover {
+  transition: all 450ms;
+  background-color: #0679bb;
+}
+
+.item .btns button:nth-child(even) {
+  background-color: white;
+  color: #159BE9;
+}
+
+.item .btns button:nth-child(even):hover {
+  transition: all 450ms;
+  background-color: rgb(227, 227, 227);
+}
+
+/* Преимущества */
+
+#advantages {
+  background-color: #292929;
+  color: white;
+}
+
+.advantages_title {
+  text-align: center;
+  font-family: "Montserrat Alt Bold";
+  font-size: 32px;
+  letter-spacing: .01em;
+  margin-bottom: 50px;
+}
+
+.advantages_content {
+  padding-left: 90px;
+  padding-right: 90px;
+  justify-content: space-between;
+}
+
+.advantage {
+  background-color: #262626;
+  padding: 23px;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid transparent;
+}
+
+.advantage:hover {
+  transition: all 450ms;
+  border-color: #4E4C4C;
+}
+
+.advantage p {
+  width: 249px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.advantage p:nth-child(even) {
+  height: 50px;
+  font-family: "OpenSans SemiBold";
+  letter-spacing: .01em;
+  font-size: 17px;
+}
+
+.advantage p:nth-child(odd) {
+  height: 108px;
+  font-family: "OpenSans Light";
+  font-size: 15px;
+  letter-spacing: .01em;
+}
+
+/* Отзывы */
+
+.reviews_title {
+  text-align: center;
+  font-family: "Montserrat Alt Bold";
+  font-size: 32px;
+  letter-spacing: .01em;
+  color: #292929;
+  margin-bottom: 75px;
+}
+
+.reviews_content {
+  padding-left: 90px;
+  padding-right: 90px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.review {
+  background-color: #292929;
+  color: white;
+  padding: 30px 46px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.review .text {
+  margin-left: 36px;
+}
+
+.review .text p:nth-child(odd) {
+  font-family: "OpenSans SemiBold";
+  letter-spacing: .01em;
+  font-size: 17px;
+}
+
+.review .text p:nth-child(even) {
+  width: 322px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  font-family: "OpenSans Light";
+  font-size: 15px;
+  letter-spacing: .01em;
+}
+
+/* Обратная связь */
+
+.forms {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.forms .title {
+  width: 554px;
+  font-family: "Montserrat Alt Bold";
+  font-size: 40px;
+  letter-spacing: .01em;
+  color: #292929;
+}
+
+.forms form {
+  width: 460px;
+  gap: 23px;
+}
+
+.forms form input {
+  width: 100%;
+  padding: 14px 25px;
+  border-radius: 8px;
+  border: 1px solid #292929;
+  font-family: "OpenSans Regular";
+  font-size: 16px;
+  letter-spacing: .01em;
+  color: #292929;
+  background-color: transparent;
+}
+
+.forms form input:focus-visible {
+  border-color: #159BE9;
+}
+
+.forms form button {
+  padding: 14px 25px;
+  background-color: #159BE9;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-family: "OpenSans Regular";
+  font-size: 16px;
+  letter-spacing: .01em;
+}
+
+.forms form button:hover {
+  transition: all 450ms;
+  background-color: #0679bb;
+}
+
+.forms form button:active {
+  transition: all 450ms;
+  transform: scale(1.075);
+}
+
+/* Подвал */
+
+footer {
+  background-color: #292929;
+}
+
+.footer1 a {
+  color: white;
+}
+
+.footer1 a:hover {
+  transition: all 450ms;
+  color: #7d7d7d;
+}
+
+.footer1 {
+  padding: 45px 22px 69px;
+  align-items: flex-start;
+}
+
+.footer1 .logo {
+  margin-right: 133px;
+  display: inline-flex;
+}
+
+.footer1 .logo:active {
+  transition: all 450ms;
+  transform: scale(0.9);
+}
+
+.footer1 .logo img {
+  width: 45px;
+}
+
+.footer_col {
+  width: 240px;
+  margin-right: 90px;
+}
+
+.footer_col p:nth-child(odd) {
+  font-family: "Montserrat Alt SemiBold";
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 9px;
+  color: white;
+}
+
+.footer_col p:nth-child(even) {
+  font-family: "OpenSans Light";
+  font-size: 16px;
+  letter-spacing: .01em;
+  color: #fafafa;
+}
+
+.footer_col a {
+  font-family: "OpenSans Regular";
+}
+
+.footer_col a:nth-child(odd) {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.footer1 .soc_media {
+  margin-left: 51px;
+}
+
+.footer2 {
+  padding-bottom: 15px;
+  font-family: "OpenSans Light";
+  font-size: 14px;
+  letter-spacing: .01em;
+  color: white;
+  justify-content: space-between;
+}
